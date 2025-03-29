@@ -1,1 +1,1 @@
-# stdy-dbt-modelling
+# Study - Dimensional Modelling with Dbt
