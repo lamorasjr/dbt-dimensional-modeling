@@ -1,0 +1,86 @@
+version: 2 
+
+seeds: 
+  - name: sales_creditcard
+    config: 
+      column_types: 
+        creditcardid: integer
+        cardtype: varchar
+        expyear: smallint
+        modifieddate: timestamptz
+        expmonth: smallint
+        cardnumber: varchar
+
+  - name: sales_customer
+    config: 
+      column_types: 
+        customerid: integer
+        personid: integer
+        storeid: integer
+        territoryid: integer
+
+  - name: sales_order_details
+    description: contains sales data between 2011-01-01 to 2011-12-31.  
+    config: 
+      column_types: 
+        salesorderid: integer
+        orderqty: smallint
+        salesorderdetailid: integer
+        unitprice: numeric
+        specialofferid: integer
+        modifieddate: timestamp
+        rowguid: varchar
+        productid: integer
+        unitpricediscount: numeric
+
+  - name: sales_order_header
+    description: contains sales data between 2011-01-01 to 2011-12-31.  
+    config: 
+      column_types: 
+        salesorderid: integer
+        shipmethodid: integer
+        billtoaddressid: integer
+        modifieddate: timestamp
+        rowguid: varchar
+        taxamt: numeric
+        shiptoaddressid: integer
+        onlineorderflag: boolean
+        territoryid: integer
+        status: smallint
+        orderdate: timestamp
+        creditcardapprovalcode: varchar
+        subtotal: numeric
+        creditcardid: integer
+        currencyrateid: integer
+        revisionnumber: smallint
+        freight: numeric
+        duedate: timestamp
+        totaldue: numeric
+        customerid: integer
+        salespersonid: integer
+        shipdate: timestamp
+        accountnumber: varchar
+
+  - name: sales_order_header_sales_reason
+    description: contains sales data between 2011-01-01 to 2011-12-31.  
+    config: 
+      column_types: 
+        salesorderid: integer
+        modifieddate: timestamp
+        salesreasonid: integer
+
+  - name: sales_reason
+    config: 
+      column_types: 
+        salesreasonid: integer
+        name: varchar
+        reasontype: varchar
+        modifieddate: timestamp
+
+  - name: sales_store
+    config: 
+      column_types: 
+        businessentityid: integer
+        storename: varchar
+        salespersonid: integer
+        modifieddate: timestamp
