@@ -1,0 +1,48 @@
+version: 2 
+
+seeds: 
+  - name: person_address
+    config: 
+      column_types: 
+        addressid: integer
+        stateprovinceid: integer
+        city: varchar
+        addressline2: varchar 
+        modifieddate: timestamp
+        rowguid: varchar
+        postalcode: varchar
+        spatiallocation: varchar
+        addressline1: varchar
+
+  - name: person_country_region
+    config:
+      column_types: 
+        countryregioncode: varchar
+        modifieddate: timestamp
+        name: varchar
+
+  - name: person_state_province
+    config: 
+      column_types: 
+        stateprovinceid: integer
+        countryregioncode: varchar
+        modifieddate: timestamp
+        rowguid: varchar 
+        name: varchar
+        territoryid: integer
+        isonlystateprovinceflag: boolean
+        stateprovincecode: varchar
+
+  - name: person
+    config: 
+      column_types: 
+        businessentityid: integer
+        title: varchar
+        firstname: varchar
+        middlename: varchar 
+        lastname: varchar
+        namestyle: boolean
+        suffix: varchar
+        modifieddate: timestamp
+        rowguid: varchar
+        emailpromotion: integer
