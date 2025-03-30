@@ -46,3 +46,16 @@ models:
         tests:
           - not_null
           - unique
+
+  - name: dim_credit_card
+    columns:
+      - name: credit_card_key
+        description: The surrogate key for the credit card table.
+        tests:
+          - not_null
+          - unique
+      - name: sales_order_id
+        description: The natural key of sales orders header
+        tests:
+          - not_null
+          - unique
