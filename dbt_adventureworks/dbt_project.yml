@@ -32,11 +32,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 seeds:
   dbt_adventureworks:
     +schema: raw_adworks
+  +docs:
+      node_color: "green"
 
 models:
   dbt_adventureworks:
     +schema: dbt_analytics
     staging:
       +materialized: view
+
     marts:
       +materialized: table
