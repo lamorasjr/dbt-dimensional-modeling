@@ -31,11 +31,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 seeds:
   dbt_adventureworks:
-    +schema: dbt_staging
+    +schema: raw_adworks
 
 models:
   dbt_adventureworks:
-    +schema: dbt_marts
+    +schema: dbt_analytics
     staging:
       +materialized: view
     marts:
