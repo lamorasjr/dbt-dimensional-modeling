@@ -13,6 +13,7 @@ tb_final as (
 		{{ dbt_utils.generate_surrogate_key(['t1.sales_order_id', 't1.credit_card_id']) }} as credit_card_key,
 		t1.sales_order_id,
 		t1.credit_card_id,
+		t1.credit_card_approval_code,
 		t2.card_type,
 		t2.card_number,
 		t2.expiration_year_month

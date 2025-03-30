@@ -59,3 +59,11 @@ models:
         tests:
           - not_null
           - unique
+
+  - name: dim_orders_reasons
+    columns:
+      - name: order_reason_key
+        description: The surrogate key for the orders reasons table.
+        tests:
+          - not_null
+          - unique
