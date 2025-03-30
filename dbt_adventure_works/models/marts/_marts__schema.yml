@@ -17,3 +17,11 @@ models:
         description: The product name.
         tests:
           - not_null
+  
+  - name: dim_date
+    columns:
+      - name: date_day
+        description: Contains unique dates and is reference for other columns.
+        tests:
+          - unique
+          - not_null
