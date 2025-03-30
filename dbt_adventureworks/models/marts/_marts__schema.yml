@@ -26,7 +26,7 @@ models:
           - unique
           - not_null
 
-  - name: dim_address
+  - name: dim_addresses
     columns:
       - name: address_key
         description: The surrogate key of the addresses.
@@ -35,6 +35,14 @@ models:
           - unique
       - name: address_id
         description: The natural key of address table.
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_customers
+    columns:
+      - name: customer_key
+        description: The surrogate key for customers table.
         tests:
           - not_null
           - unique
