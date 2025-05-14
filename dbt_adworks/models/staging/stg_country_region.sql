@@ -1,4 +1,4 @@
 select
-	countryregioncode as country_region_code,
+	countryregioncode as country_code,
 	"name" as country_name
-from {{ ref('person_country_region') }}
+from {{ ref('person__country_region') }}

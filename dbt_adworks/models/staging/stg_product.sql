@@ -7,4 +7,4 @@ select
 	color as product_color,
 	standardcost as product_cost,
 	listprice as product_price
-from {{ ref('product') }}
+from {{ ref('product__product') }}

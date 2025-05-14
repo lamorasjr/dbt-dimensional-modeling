@@ -3,4 +3,4 @@ select
 	personid as person_id,
 	storeid as store_id,
 	territoryid as territory_id
-from {{ ref('sales_customer') }}
+from {{ ref('sales__customer') }}

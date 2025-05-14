@@ -4,4 +4,4 @@ select
 	city,
 	stateprovinceid as state_province_id,
 	postalcode as postal_code
-from {{ ref('person_address') }}
+from {{ ref('person__address') }}
