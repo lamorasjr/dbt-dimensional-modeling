@@ -23,13 +23,13 @@ tb_final as (
 		t1.state_province_id,
 		t2.state_province_name,
 		t2.state_province_code,
-		t2.country_region_code,
+		t2.country_code,
 		t3.country_name
 	from address as t1
 		left join state_province as t2
 			on t1.state_province_id = t2.state_province_id
 		left join country_region as t3
-			on t2.country_region_code = t3.country_region_code
+			on t2.country_code = t3.country_code
 )
 
 select * from tb_final

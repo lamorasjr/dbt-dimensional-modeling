@@ -9,4 +9,4 @@ select
 	day_of_month,
 	day_of_year
 from
-	{{ ref('date') }}
+	{{ ref('date__date') }}
