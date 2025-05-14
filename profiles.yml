@@ -1,5 +1,3 @@
-# Is not recommended to have this file in the project directory
-# Only used for make easier the build of the Docker compose file
 dbt_adworks:
   target: dev
   outputs:
