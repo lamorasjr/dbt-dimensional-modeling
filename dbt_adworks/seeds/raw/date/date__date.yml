@@ -1,7 +1,7 @@
 version: 2 
 
 seeds: 
-  - name: date
+  - name: date__date
     config: 
       column_types: 
         date_day: date

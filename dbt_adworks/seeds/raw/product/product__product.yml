@@ -1,7 +1,7 @@
 version: 2 
 
 seeds:
-  - name: product
+  - name: product__product
     config: 
       column_types: 
         productid: integer
@@ -24,18 +24,3 @@ seeds:
         color: varchar
         sellstartdate: timestamp
         weight: numeric
-
-  - name: product_category
-    config: 
-      column_types: 
-        productcategoryid: integer
-        name: varchar
-        modifieddate: timestamp
-
-  - name: product_subcategory
-    config: 
-      column_types: 
-        productsubcategoryid: integer
-        productcategoryid: integer
-        name: varchar
-        modifieddate: timestamp
