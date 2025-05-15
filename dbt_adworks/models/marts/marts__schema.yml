@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_products
+  - name: dim_product
     columns:
       - name: product_key
         description: The surrogate key of the product.
@@ -26,7 +26,7 @@ models:
           - unique
           - not_null
 
-  - name: dim_addresses
+  - name: dim_address
     columns:
       - name: address_key
         description: The surrogate key of the addresses.
@@ -39,7 +39,7 @@ models:
           - not_null
           - unique
 
-  - name: dim_customers
+  - name: dim_customer
     columns:
       - name: customer_key
         description: The surrogate key for customers table.
