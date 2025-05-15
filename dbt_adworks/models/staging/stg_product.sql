@@ -6,5 +6,6 @@ select
 	productnumber as product_number,
 	color as product_color,
 	standardcost as product_cost,
-	listprice as product_price
+	listprice as product_price,
+	sellstartdate as sell_start_date
 from {{ ref('product__product') }}
