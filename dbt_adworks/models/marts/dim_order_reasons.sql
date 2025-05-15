@@ -1,9 +1,9 @@
-with reasons as (
+with stg_reasons as (
 	select *
 	from {{ ref('stg_sales_reasons') }}
 ),
 
-orders_reasons as (
+stg_orders_reasons as (
 	select *
 	from {{ ref('stg_sales_orders_reasons') }}
 ),
@@ -15,8 +15,8 @@ tb_final as (
 		t1.sales_reason_id,
 		t1.reason,
 		t1.reason_type
-	from reasons as t1
-		inner join orders_reasons as t2
+	from stg_reasons as t1
+		inner join stg_orders_reasons as t2
 			on t1.sales_reason_id = t2.sales_reason_id
 )
 

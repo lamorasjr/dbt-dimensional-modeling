@@ -1,14 +1,14 @@
-with address as (
+with stg_address as (
 	select *
 	from {{ ref('stg_address') }}
 ),
 
-state_province as (
+stg_state_province as (
 	select *
 	from {{ ref('stg_state_province') }}
 ),
 
-country_region as (
+stg_country_region as (
 	select *
 	from {{ ref('stg_country_region') }}
 ),
@@ -25,10 +25,10 @@ tb_final as (
 		t2.state_province_code,
 		t2.country_code,
 		t3.country_name
-	from address as t1
-		left join state_province as t2
+	from stg_address as t1
+		left join stg_state_province as t2
 			on t1.state_province_id = t2.state_province_id
-		left join country_region as t3
+		left join stg_country_region as t3
 			on t2.country_code = t3.country_code
 )
 

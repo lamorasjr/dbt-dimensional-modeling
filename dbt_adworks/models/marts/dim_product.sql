@@ -1,14 +1,14 @@
-with product as (
+with stg_product as (
 	select *
 	from {{ ref('stg_product' )}}
 ),
 
-product_subcategory as (
+stg_product_subcategory as (
 	select *
 	from {{ ref('stg_product_subcategory' )}}
 ),
 
-product_category as (
+stg_product_category as (
 	select *
 	from {{ ref('stg_product_category' )}}
 ),
@@ -27,10 +27,10 @@ tb_final as (
 		t2.subcategory_name,
 		t3.product_category_id,
 		t3.category_name
-	from product as t1
-		left join product_subcategory as t2
+	from stg_product as t1
+		left join stg_product_subcategory as t2
 			on t1.product_subcategory_id = t2.product_subcategory_id
-		left join product_category as t3
+		left join stg_product_category as t3
 			on t2.product_category_id = t3.product_category_id
 )
 
