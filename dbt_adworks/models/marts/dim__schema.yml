@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: dim_product
+    columns:
+      - name: product_key
+        description: The surrogate key of the product.
+        tests:
+          - not_null
+          - unique
+      - name: product_id
+        description: The natural key of the product.
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: The product name.
+        tests:
+          - not_null
+  
+  - name: dim_date
+    columns:
+      - name: date_day
+        description: Contains unique dates and is reference for other columns.
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_address
+    columns:
+      - name: address_key
+        description: The surrogate key of the addresses.
+        tests:
+          - not_null
+          - unique
+      - name: address_id
+        description: The natural key of address table.
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_customer
+    columns:
+      - name: customer_key
+        description: The surrogate key for customers table.
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_credit_card
+    columns:
+      - name: credit_card_key
+        description: The surrogate key for the credit card table.
+        tests:
+          - not_null
+          - unique
+      - name: sales_order_id
+        description: The natural key of sales orders header
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_order_reasons
+    columns:
+      - name: order_reason_key
+        description: The surrogate key for the orders reasons table.
+        tests:
+          - not_null
+          - unique
