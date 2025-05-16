@@ -4,7 +4,7 @@ models:
   - name: dim_product
     columns:
       - name: product_key
-        description: The surrogate key of the product.
+        description: The surrogate key of the dim_product table.
         tests:
           - not_null
           - unique
@@ -20,6 +20,11 @@ models:
   
   - name: dim_date
     columns:
+      - name: date_key
+        description: The surrogate key for the dim_date table.
+        tests:
+          - unique
+          - not_null
       - name: date_day
         description: Contains unique dates and is reference for other columns.
         tests:
@@ -29,7 +34,7 @@ models:
   - name: dim_address
     columns:
       - name: address_key
-        description: The surrogate key of the addresses.
+        description: The surrogate key of the dim_address table.
         tests:
           - not_null
           - unique
@@ -42,7 +47,7 @@ models:
   - name: dim_customer
     columns:
       - name: customer_key
-        description: The surrogate key for customers table.
+        description: The surrogate key for the dim_customer table.
         tests:
           - not_null
           - unique
@@ -50,7 +55,7 @@ models:
   - name: dim_credit_card
     columns:
       - name: credit_card_key
-        description: The surrogate key for the credit card table.
+        description: The surrogate key for the dim_credit_card table.
         tests:
           - not_null
           - unique
@@ -63,7 +68,7 @@ models:
   - name: dim_order_reasons
     columns:
       - name: order_reason_key
-        description: The surrogate key for the orders reasons table.
+        description: The surrogate key for the dim_order_reasons table.
         tests:
           - not_null
           - unique

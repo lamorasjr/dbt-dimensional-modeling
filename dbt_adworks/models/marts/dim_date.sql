@@ -1,4 +1,5 @@
 select
+	{{ dbt_utils.generate_surrogate_key(['cast(date_day as date)']) }} as date_key,
 	date_day,
 	prior_date_day,
 	next_date_day,
