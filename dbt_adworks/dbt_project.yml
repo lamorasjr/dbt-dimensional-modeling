@@ -33,13 +33,17 @@ seeds:
   dbt_adworks:
     +schema: adworks_raw
   +docs:
-      node_color: "green"
+    node_color: "green"
 
 models:
   dbt_adworks:
     +schema: adworks_analytics
     staging:
       +materialized: view
+      +docs:
+        node_color: "orange"
 
     marts:
       +materialized: table
+      +docs:
+        node_color: "blue"
