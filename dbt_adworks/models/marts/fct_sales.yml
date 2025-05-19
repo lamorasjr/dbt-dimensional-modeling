@@ -29,11 +29,6 @@ models:
         tests:
           - not_null
 
-      - name: order_status_key
-        description: The foreign key of the order_status.
-        tests:
-          - not_null
-
       - name: order_date_key
         description: The foreign key of the order_date.
         tests:
