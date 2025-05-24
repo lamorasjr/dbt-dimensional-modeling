@@ -12,9 +12,9 @@ The content and instructions for this project were adapted from the following ar
 - [x] Step 2 - Identify the business process to model
 - [x] Step 3 - Identify the fact and dimension tables
 - [x] Step 4 - Create the dimension tables
-- [ ] Step 5 - Create the fact table
+- [x] Step 5 - Create the fact table
 - [ ] Step 6 - Document the dimensional model relationships
-- [ ] Step 7 - Consume the dimensional model
+- [x] Step 7 - Consume the dimensional model
 
 ### Using the starter project
 
