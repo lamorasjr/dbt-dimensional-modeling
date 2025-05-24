@@ -18,9 +18,9 @@ tb_final as (
         {{ dbt_utils.generate_surrogate_key(['t1.customer_id']) }} as customer_key,
 		t1.customer_id,
 		t1.person_id,
-		coalesce(t2.person_full_name, 'Unknown') as person_name,
+		t2.person_full_name as person_name,
 		t1.store_id,
-		coalesce(t3.store_name, 'Unknown') as store_name
+		t3.store_name as store_name
 	from stg_customer as t1
 		left join stg_person as t2
 			on t1.person_id = t2.person_id

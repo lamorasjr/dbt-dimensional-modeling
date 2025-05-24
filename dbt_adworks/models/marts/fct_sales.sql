@@ -16,6 +16,7 @@ tb_final as (
         {{ dbt_utils.generate_surrogate_key(['t2.credit_card_id']) }} as credit_card_key,
         {{ dbt_utils.generate_surrogate_key(['t2.ship_to_address_id']) }} as ship_to_address_key,
         {{ dbt_utils.generate_surrogate_key(['t2.order_date']) }} as order_date_key,
+        {{ dbt_utils.generate_surrogate_key(['t1.sales_order_id']) }} as order_key,
         t2.order_status,
         t1.sales_order_id,
         t1.sales_order_detail_id,
