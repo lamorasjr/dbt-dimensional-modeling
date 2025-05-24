@@ -28,7 +28,7 @@ tb_final as (
         {{ dbt_utils.star(from=ref('dim_product'), relation_alias='d_product', except=['product_key']) }},
         {{ dbt_utils.star(from=ref('dim_customer'), relation_alias='d_customer', except=['customer_key']) }},
         {{ dbt_utils.star(from=ref('dim_credit_card'), relation_alias='d_credit_card', except=['credit_card_key', 'sales_order_id']) }},
-        {{ dbt_utils.star(from=ref('dim_address'), relation_alias='d_address', except=['ship_to_address_key']) }},
+        {{ dbt_utils.star(from=ref('dim_address'), relation_alias='d_address', except=['ship_to_address_key', 'address_key']) }},
         {{ dbt_utils.star(from=ref('dim_date'), relation_alias='d_date', except=['date_key']) }}
         
     from f_sales

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: obt_sales
+    columns:
+      - name: sales_key
+        description: The surrogate key of the obt_sales table.
+        tests:
+          - not_null
+          - unique
