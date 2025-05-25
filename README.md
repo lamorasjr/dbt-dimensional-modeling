@@ -62,6 +62,8 @@ Based on the requirements identified in Step 2: Identify the Business Process to
 - Query 2 – Brief description of what it answers
 - Query 3 – Brief description of what it answers
 
+## Project Documentations
+To be defined...
 
 ## Prerequisites
 To be defined...
