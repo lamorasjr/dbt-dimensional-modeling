@@ -11,17 +11,33 @@ The goal is to showcase how to structure a modern analytics pipeline using dbt�
 
 
 ## Objectives
- - [ ] Set up the project environment, including the database and dbt project structure.
- - [ ] Analyze business requirements to inform the design of the dimensional model.
- - [ ] Ingest raw data into the warehouse using dbt seed functionality.
- - [ ] Design and implement dimension tables following best practices in dimensional modeling.
- - [ ] Design and implement the central fact table to capture key business processes.
- - [ ] Document the data models using dbt docs and visualize relationships with an ER diagram.
- - [ ] Develop SQL views and queries to support business end-user analysis.
+ - Set up the project environment, including the database and dbt project structure.
+ - Analyze business requirements to inform the design of the dimensional model.
+ - Ingest raw data into the warehouse using dbt seed functionality.
+ - Design and implement dimension tables following best practices in dimensional modeling.
+ - Design and implement the central fact table to capture key business processes.
+ - Document the data models using dbt docs and visualize relationships with an ER diagram.
+ - Develop SQL views and queries to support business end-user analysis.
 
 
 ## Table of Contents
-To be defined...
+- [About](#about)
+- [Objectives](#objectives)
+- [Project Structure](#project-structure)
+- [Dimensional Model Overview](#dimensional-model-overview)
+- [Data Model Diagram](#data-model-diagram)
+- [Data Model Lineage](#data-model-lineage)
+- [Business Insights & SQL Analysis](#business-insights--sql-analysis)
+  - [Dataset Overview](#dataset-overview)
+  - [Analytical Queries](#analytical-queries-built-on-the-dimensional-model)
+- [Requirements](#requirements)
+- [Setup Instructions](#setup-instructions)
+  - [1. Clone and Set Up the Project](#1-clone-and-set-up-the-project)
+  - [2. Start the PostgreSQL Docker Container](#2-start-the-postgresql-docker-container)
+  - [3. Initialize the dbt Project](#3-initialize-the-dbt-project)
+  - [4. Run the dbt Pipeline](#4-run-the-dbt-pipeline)
+  - [5. Generate and View dbt Documentation](#5-generate-and-view-dbt-documentation)
+- [References & Credits](#references--credits)
 
 
 ## Project Structure
@@ -58,11 +74,18 @@ To be defined...
 To be defined...
 
 
-## Usage Examples
-Based on the requirements identified in Step 2: Identify the Business Process to Model, the following SQL analyses were developed to address key business questions:
-- Query 1 – Brief description of what it answers
-- Query 2 – Brief description of what it answers
-- Query 3 – Brief description of what it answers
+## Business Insights & SQL Analysis
+
+### Dataset Overview
+The dataset is based on AdventureWorks, a company that manufactures bicycles and sells them both to consumers (B2C) 
+and businesses (B2B). Products are shipped globally to customers across various markets.
+
+#### Analytical queries built on the Dimensional Model:
+* [Total Revenue in 2011 by product category and subcategory](dbt_adworks/analyses/revenue_by_product_and_subcategory.sql)
+* [Total Revenue in 2011 by customer](dbt_adworks/analyses/revenue_by_customer.sql)
+* [Total Revenue in 2011 by order status](dbt_adworks/analyses/revenue_by_order_status.sql)
+* [Total Revenue in 2011 by Shipping Country](dbt_adworks/analyses/revenue_by_shipping_country.sql)
+* [Top 10 cities in the United States by total revenue (the company’s largest market)](dbt_adworks/analyses/top10_revenue_by_city_us.sql)
 
 
 ## Requirements
