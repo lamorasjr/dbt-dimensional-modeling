@@ -10,16 +10,6 @@ The goal is to showcase how to structure a modern analytics pipeline using dbtâ€
 <project_architecture_digram>
 
 
-## Objectives
- - Set up the project environment, including the database and dbt project structure.
- - Analyze business requirements to inform the design of the dimensional model.
- - Ingest raw data into the warehouse using dbt seed functionality.
- - Design and implement dimension tables following best practices in dimensional modeling.
- - Design and implement the central fact table to capture key business processes.
- - Document the data models using dbt docs and visualize relationships with an ER diagram.
- - Develop SQL views and queries to support business end-user analysis.
-
-
 ## Table of Contents
 - [About](#about)
 - [Objectives](#objectives)
@@ -38,6 +28,16 @@ The goal is to showcase how to structure a modern analytics pipeline using dbtâ€
   - [4. Run the dbt Pipeline](#4-run-the-dbt-pipeline)
   - [5. Generate and View dbt Documentation](#5-generate-and-view-dbt-documentation)
 - [References & Credits](#references--credits)
+
+
+## Objectives
+ - Set up the project environment, including the database and dbt project structure.
+ - Analyze business requirements to inform the design of the dimensional model.
+ - Ingest raw data into the warehouse using dbt seed functionality.
+ - Design and implement dimension tables following best practices in dimensional modeling.
+ - Design and implement the central fact table to capture key business processes.
+ - Document the data models using dbt docs and visualize relationships with an ER diagram.
+ - Develop SQL views and queries to support business end-user analysis.
 
 
 ## Project Structure
