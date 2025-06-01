@@ -28,7 +28,7 @@ To be defined...
 ```bash
 dbt-dimensional-modeling/
 ├── dbt_adworks/                 # Main dbt project directory
-│   ├── analyses/                # SQL analyses not part of models (business questions solutions)
+│   ├── analyses/                # SQL for business analyses not part of models
 │   ├── macros/                  # Reusable SQL/Jinja functions
 │   ├── models/                  # Core dbt models
 │   │   ├── staging/             # Staging tables scripts based on the raw data
