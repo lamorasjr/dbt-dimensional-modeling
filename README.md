@@ -24,7 +24,7 @@ The goal is to showcase how to structure a modern analytics pipeline using dbt â
 - [Objectives](#objectives)
 - [Project Structure](#project-structure)
 - [Dimensional Model Overview](#dimensional-model-overview)
-- [Data Model Diagram](#data-model-diagram)
+- [Data Model Diagram / ER Diagram](#data-model-diagram--er-diagram)
 - [Data Model Lineage](#data-model-lineage)
 - [Business Insights & SQL Analysis](#business-insights--sql-analysis)
   - [Dataset Overview](#dataset-overview)
@@ -63,14 +63,38 @@ dbt-dimensional-modeling/
 
 
 ## Dimensional Model Overview
-To be defined...
 
-## Data Model Diagram
-To be defined...
+- ***Dimensional modeling*** focuses on delivering data that is understandable to the business and optimized for fast analytical queries. It is commonly referred to as a star schema.
+
+- ***Star schema*** is a way to structure a database where data is organized into fact tables and dimension tables. It gets its name because the layout resembles a star - with the fact table at the center and dimension tables branching out from it.
+
+- ***Fact tables*** contain the measurable and transactional data such as sales, logs, or events. These tables hold the measures of the model and include their own primary key (PK) as well as foreign keys (FKs) linking to dimension tables.
+
+- ***Dimension tables*** provide context to the factsâ€”typically storing the descriptive categories used in analysis (e.g., customer, product, date). Their primary keys (PKs) are referenced by the fact table.
+
+- ***One-big table (OBT)*** is a denormalized data model where all relevant facts and dimensions are combined into a single wide table. It simplifies data access making it easier to run ad hoc queries and generate dashboards. 
+
+
+## Data Model Diagram / ER Diagram
+![Entity Relationship (ER) Diagram](assets/er_diagram.png)
+
+- `fct_sales` - contains individual sales transactions. It stores key measures like revenue, quantity, and unit price.
+
+- `dim_product` - contains detailed information about products, including product names, categories, pricing, etc.
+
+- `dim_customer` - contains customer-related data enabling sales analysis from the perspective of individual customers or retail stores.
+
+- `dim_credit_card` - stores credit card transaction details associated with sales orders.
+
+- `dim_address` - provides geographic context by storing shipping addresses.
+
+- `dim_date` - dimension table that enables time-based analysis.
+
+- `dim_order_reasons` - contains reasons for orders such as promotions, marketing, or other drivers.
 
 
 ## Data Model Lineage
-To be defined...
+![Data Model Lineage Graph](assets/dbt_lineage.png)
 
 
 ## Business Insights & SQL Analysis
@@ -97,7 +121,10 @@ and businesses (B2B). Products are shipped globally to customers across various 
 - Clone this repository:
     ```bash
     git clone https://github.com/lamorasjr/dbt-dimensional-modeling.git
+    ```
 
+- Change to the repo directory:
+    ```bash
     cd dbt-dimensional-modeling
     ```
 
@@ -168,6 +195,7 @@ The content of this project is my approach for the tutorial presented in the bel
 - Github Repo: [Data-Engineer-Camp/dbt-dimensional-modelling](https://github.com/Data-Engineer-Camp/dbt-dimensional-modelling/tree/main)
 
 
-Additional resources:
+### Additional resources:
 - More about dbt: [dbt Docs](https://docs.getdbt.com/docs/introduction)
-- Project dataset: [Adventure Works](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
+- Project dataset: [AdventureWorks](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms)
+- ER Diagram graph: [Diagram.io](https://dbdiagram.io/d)
