@@ -1,6 +1,5 @@
 # Dimensional Data Modeling with dbt
 
-## About
 This project is a hands-on implementation of dimensional data modeling using dbt.
 
 It is based on the tutorial ["Building a Kimball Dimensional Model with dbt"](https://github.com/Data-Engineer-Camp/dbt-dimensional-modelling), applying the Kimball methodology to build a Star Schema model and, later on, a OBT (One-Big-Table) using the AdventureWorks dataset to answer proposed business questions.
@@ -20,7 +19,6 @@ The goal is to showcase how to structure a modern analytics pipeline using dbt â
  - Develop SQL views and queries to support business end-user analysis.
 
 ## Table of Contents
-- [About](#about)
 - [Objectives](#objectives)
 - [Project Structure](#project-structure)
 - [Dimensional Model Overview](#dimensional-model-overview)
