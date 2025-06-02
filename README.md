@@ -7,7 +7,7 @@ It is based on the tutorial ["Building a Kimball Dimensional Model with dbt"](ht
 
 The goal is to showcase how to structure a modern analytics pipeline using dbt — focusing on clean data modeling, transformation best practices, and documentation — while simulating a Data Warehouse using a PostgreSQL container running within Docker.
 
-<project_architecture_digram>
+![Project Architecture Diagram](assets/project_arch.png)
 
 
 ## Objectives
@@ -95,6 +95,14 @@ dbt-dimensional-modeling/
 
 ## Data Model Lineage
 ![Data Model Lineage Graph](assets/dbt_lineage.png)
+
+- ***green*** - raw data, ingested with dbt seeds
+
+- ***yellow*** - stage views, cleaned and standadized data
+
+- ***blue*** - dimensional data model
+
+- ***light-blue*** - ad-hoc queries
 
 
 ## Business Insights & SQL Analysis
