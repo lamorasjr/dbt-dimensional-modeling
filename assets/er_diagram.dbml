@@ -1,0 +1,90 @@
+Table fct_sales {
+  sales_key varchar [primary key]
+  product_key varchar
+  customer_key varchar
+  credit_card_key varchar
+  ship_to_address_key varchar
+  order_date_key varchar
+  order_key varchar
+  order_status integer
+  sales_order_id integer
+  sales_order_detail_id integer
+  unit_price decimal
+  order_qty integer
+  revenue decimal
+}
+
+Table dim_product {
+  product_key varchar [primary key]
+  product_id integer
+  product_name varchar
+  product_class varchar
+  product_number varchar
+  product_color varchar
+  product_cost decimal
+  product_price decimal
+  product_subcategory_id integer
+  subcategory_name varchar
+  product_category_id integer
+  category_name varchar
+}
+
+Table dim_customer {
+  customer_key varchar [primary key]
+  customer_id integer
+  person_id integer
+  person_name varchar
+  store_id integer
+  store_name varchar
+}
+
+Table dim_credit_card {
+  credit_card_key varchar [primary key]
+  sales_order_id integer
+  credit_card_id integer
+  credit_card_approval_code varchar
+  card_type varchar
+  card_number varchar
+  expiration_year_month varchar
+}
+
+Table dim_address {
+  address_key varchar [primary key]
+  address_id integer
+  postal_code varchar
+  full_address varchar
+  city varchar
+  state_province_id integer
+  state_province_name varchar
+  state_province_code varchar
+  country_code varchar
+  country_name varchar
+}
+
+Table dim_date {
+  date_key varchar [primary key]
+  date_day date
+  prior_date_day date
+  next_date_day date
+  prior_year_date_day date
+  prior_year_over_year_date_day date
+  day_of_week integer
+  day_of_week_name varchar
+  day_of_month integer
+  day_of_year integer
+}
+
+Table dim_order_reasons {
+  order_reason_key varchar [primary key]
+  sales_order_id integer
+  reason_type_promotion integer
+  reason_type_marketing integer
+  reason_type_other integer
+}
+
+Ref: fct_sales.product_key > dim_product.product_key
+Ref: fct_sales.customer_key > dim_customer.customer_key
+Ref: fct_sales.credit_card_key > dim_credit_card.credit_card_key
+Ref: fct_sales.ship_to_address_key > dim_address.address_key
+Ref: fct_sales.order_date_key > dim_date.date_key
+Ref: fct_sales.order_key > dim_order_reasons.order_reason_key
