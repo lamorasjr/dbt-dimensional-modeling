@@ -5,7 +5,7 @@ This project is a hands-on implementation of dimensional data modeling using dbt
 
 It is based on the tutorial ["Building a Kimball Dimensional Model with dbt"](https://github.com/Data-Engineer-Camp/dbt-dimensional-modelling), applying the Kimball methodology to build a Star Schema model and, later on, a OBT (One-Big-Table) using the AdventureWorks dataset to answer proposed business questions.
 
-The goal is to showcase how to structure a modern analytics pipeline using dbt—focusing on clean data modeling, transformation best practices, and documentation—while simulating a Data Warehouse using a PostgreSQL container running within Docker.
+The goal is to showcase how to structure a modern analytics pipeline using dbt — focusing on clean data modeling, transformation best practices, and documentation — while simulating a Data Warehouse using a PostgreSQL container running within Docker.
 
 <project_architecture_digram>
 
@@ -56,7 +56,7 @@ dbt-dimensional-modeling/
 │   ├── packages.yml             # dbt package dependencies
 │   └── profiles.yml             # dbt profile (usually located in ~/.dbt/)
 ├── docker/                      # Docker setup for Postgres container
-├── images/                      # Diagrams, model ERDs, and visual assets
+├── assets/                      # Common commands and visual assets
 ├── requirements.txt             # Python requirements
 └── README.md                    
 ```
