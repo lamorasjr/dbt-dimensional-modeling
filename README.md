@@ -11,7 +11,7 @@ The goal is to showcase how to structure a modern analytics pipeline using dbt â
 
 ## Objectives
  - Set up the project environment, including the database and dbt project structure.
- - Analyze business requirements to inform the design of the dimensional model.
+ - Analyze business requirements to plan the design of the dimensional model.
  - Ingest raw data into the warehouse using dbt seed functionality.
  - Design and implement dimension tables following best practices in dimensional modeling.
  - Design and implement the central fact table to capture key business processes.
